@@ -1,0 +1,126 @@
+[
+    {
+        "id": "9420c17c4afb8ed9",
+        "type": "tab",
+        "label": "emqx",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "9b7179b101830fef",
+        "type": "inject",
+        "z": "9420c17c4afb8ed9",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"temperature\": 25.5, \"sensor\": \"ESP32_01\"}",
+        "payloadType": "json",
+        "x": 290,
+        "y": 220,
+        "wires": [
+            [
+                "16e4f6b3ca141757",
+                "71079c4d4302f855",
+                "12ae7c8fc31ebf8d"
+            ]
+        ]
+    },
+    {
+        "id": "16e4f6b3ca141757",
+        "type": "mqtt out",
+        "z": "9420c17c4afb8ed9",
+        "name": "",
+        "topic": "campus/lab1/temperature",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "52f073e8ce9a46fa",
+        "x": 550,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "12ae7c8fc31ebf8d",
+        "type": "mqtt out",
+        "z": "9420c17c4afb8ed9",
+        "name": "",
+        "topic": "campus/lab1/humidity",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "52f073e8ce9a46fa",
+        "x": 580,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "71079c4d4302f855",
+        "type": "mqtt out",
+        "z": "9420c17c4afb8ed9",
+        "name": "",
+        "topic": "campus/lab2/temperature",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "52f073e8ce9a46fa",
+        "x": 570,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "52f073e8ce9a46fa",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "host.docker.internal",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    }
+]
